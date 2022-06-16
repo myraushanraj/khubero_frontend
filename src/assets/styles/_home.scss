@@ -1,0 +1,30 @@
+.interview-wrap {
+    padding: 312px 140px;
+
+    @media (max-width: 1440px) {
+        padding: 250px 100px;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 230px 60px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 180px 35px;
+    }
+
+    .banner-heading {
+        margin-bottom: 20px;
+    }
+
+    .banner-content {
+        margin-bottom: 50px;
+        color: $black-25;
+    }
+}
+
+.img-wrap {
+    img {
+        width: 100%;
+    }
+}

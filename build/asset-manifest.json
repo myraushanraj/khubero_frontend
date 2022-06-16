@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1a3cd81b.css",
+    "main.js": "/static/js/main.2492ddfe.js",
+    "static/js/787.ffb5261b.chunk.js": "/static/js/787.ffb5261b.chunk.js",
+    "static/media/Lufga-ExtraBoldItalic.otf": "/static/media/Lufga-ExtraBoldItalic.fc822ef8046663cd0d73.otf",
+    "static/media/Lufga-BoldItalic.otf": "/static/media/Lufga-BoldItalic.0815493d3f6aa1b4d580.otf",
+    "static/media/Lufga-BlackItalic.otf": "/static/media/Lufga-BlackItalic.65d187505131fc8c1b08.otf",
+    "static/media/Lufga-MediumItalic.otf": "/static/media/Lufga-MediumItalic.9f5363efc557ef94987d.otf",
+    "static/media/Lufga-ExtraBold.otf": "/static/media/Lufga-ExtraBold.e00ed57d53337d7d8333.otf",
+    "static/media/Lufga-Black.otf": "/static/media/Lufga-Black.79c2cce015fa8e89c357.otf",
+    "static/media/Lufga-SemiBoldItalic.otf": "/static/media/Lufga-SemiBoldItalic.ffd92cf0ef002db49ec6.otf",
+    "static/media/Lufga-LightItalic.otf": "/static/media/Lufga-LightItalic.da3164485a002fc40cb4.otf",
+    "static/media/Lufga-SemiBold.otf": "/static/media/Lufga-SemiBold.ff7cf578502020ce11f9.otf",
+    "static/media/Lufga-Bold.otf": "/static/media/Lufga-Bold.3f714042b067416dcda1.otf",
+    "static/media/Lufga-Italic.otf": "/static/media/Lufga-Italic.8bb72606fbd7984b3d8d.otf",
+    "static/media/Lufga-Medium.otf": "/static/media/Lufga-Medium.ce08c574f576ce2d8418.otf",
+    "static/media/Lufga-ExtraLightItalic.otf": "/static/media/Lufga-ExtraLightItalic.da9cc9cf31cf47a32e92.otf",
+    "static/media/Lufga-Light.otf": "/static/media/Lufga-Light.48406a0fcbe4442bfc38.otf",
+    "static/media/Lufga-ThinItalic.otf": "/static/media/Lufga-ThinItalic.669f2f264aa727500efe.otf",
+    "static/media/Lufga-ExtraLight.otf": "/static/media/Lufga-ExtraLight.7a5cffc42120c7bb51f1.otf",
+    "static/media/Lufga-Regular.otf": "/static/media/Lufga-Regular.fbaf9a3ed7cb79d639cd.otf",
+    "static/media/Lufga-Thin.otf": "/static/media/Lufga-Thin.6328b35b97198b44cf1f.otf",
+    "static/media/footer-logo.svg": "/static/media/footer-logo.235fe6dfd99e1f92bcaded568df70ff2.svg",
+    "static/media/logo.svg": "/static/media/logo.4fa666ba0d1c66dc691a124f97dfa74c.svg",
+    "index.html": "/index.html",
+    "main.1a3cd81b.css.map": "/static/css/main.1a3cd81b.css.map",
+    "main.2492ddfe.js.map": "/static/js/main.2492ddfe.js.map",
+    "787.ffb5261b.chunk.js.map": "/static/js/787.ffb5261b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a3cd81b.css",
+    "static/js/main.2492ddfe.js"
+  ]
+}
