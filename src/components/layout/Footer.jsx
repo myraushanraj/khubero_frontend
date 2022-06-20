@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
 
                 <div className="col-md-6 col-4">
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col-md-3 col-12 text-center">
                             <a href="/" className="footer-link">Services</a>
                         </div>
@@ -33,24 +33,24 @@ const Footer = () => {
                         <div className="col-md-3 col-12 text-center">
                             <a href="/" className="footer-link">Contact</a>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="col-md-auto col-8">
-                    <a href="mailto:Contact@gfuturetech.com" className="footer-link float-end">
+                    {/* <a href="mailto:Contact@gfuturetech.com" className="footer-link float-end">
                       <FontAwesomeIcon icon={faEnvelope} className="me-2" />
-                        Contact@gfuturetech.com</a>
+                        Contact@gfuturetech.com</a> */}
                 </div>
             </div>
 
             <div className="footer-separator"></div>
 
             <div className="row">
-                <div className="col-md-3 col-lg-2 copyright mb-3">
+                <div className="col-12 copyright ">
                     <div className="row">
                         <div className="col-auto">
-                            <a href="https://gfuturetech.com/">
-                                <p>© GFuture Tech Pvt Ltd - 2022</p>
+                            <a href="">
+                                <p>Copyright © 2022 Khubero. All Rights Reserved.</p>
                             </a>
                         </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
                 </div>
 
                 <div className="col-md-9 col-lg-8">
-                    <div className="row justify-content-center">
+                    {/* <div className="row justify-content-center">
                         <div className="col-auto">
                             <p><a href="/">Terms & Conditions</a></p>
                         </div>
@@ -75,11 +75,11 @@ const Footer = () => {
                         <div className="col-auto">
                             <p><a href="/">Cookie Policy</a></p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="col-md-12 col-lg-2 text-right social text-md-center">
-                    <div className="d-flex justify-content-end justify-content-md-center">
+                    {/* <div className="d-flex justify-content-end justify-content-md-center">
                         <a href="https://www.facebook.com/gfuturetech/" target="_blank" className="social-wrap">
                           <FontAwesomeIcon icon={faFacebookF} />
                         </a>
@@ -92,7 +92,7 @@ const Footer = () => {
                         <a href="https://gfuturetech.blogspot.com/" target="_blank" className="social-wrap">
                           <FontAwesomeIcon icon={faBlog} />
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

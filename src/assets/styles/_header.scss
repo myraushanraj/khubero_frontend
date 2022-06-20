@@ -3,12 +3,11 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 29px 140px;
-    position: absolute;
     width: 100%;
     z-index: 999;
 
     @media (max-width: 1680px) {
-        padding: 25px 120px;
+        padding: 25px 20px;
     }
 
     @media (max-width: 1440px) {
@@ -29,7 +28,7 @@ nav {
 }
 
 .hamburger_menu {
-    width: 87%;
+    // width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,7 +58,9 @@ nav {
                 }
 
                 @media (max-width: 1800px) {
-                    margin: 0 60px;
+                    margin: 0 6px;
+                    margin-left: 39px;
+
                 }
 
                 @media (max-width: 1680px) {
@@ -377,4 +378,23 @@ nav {
             left: 0;
         }
     }
+}
+
+.custom-button{
+    justify-content: center;
+align-items: center;
+padding: 10px 25px;
+gap: 10px;
+
+width: 129px;
+height: 45px;
+
+background: #AEACFF;
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 8;
+flex-grow: 0;
 }

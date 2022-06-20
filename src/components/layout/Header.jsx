@@ -8,12 +8,12 @@ const Header = () => {
     setToggle(!toggle);
   }
     return (
-      <nav>
+      <nav className="">
         <a href="/">
           <img src={logo} alt="logo" className="logo" />
         </a>
 
-        <button type="button" onClick={mobileMenu} className="button_container">
+        <button type="button" onClick={mobileMenu} className="button_container hide">
           <svg
             className={
               toggle ? "ham hamRotate ham7 active" : "ham hamRotate ham7"
@@ -33,7 +33,7 @@ const Header = () => {
           </svg>
         </button>
 
-        <div className={toggle ? "hamburger_menu open" : "hamburger_menu"}>
+        <div className={toggle ? "hamburger_menu open hide" : "hamburger_menu hide"}>
           <div className="nav-links">
             <ul>
               <li className="">
@@ -61,12 +61,12 @@ const Header = () => {
                 <a href="/">branding</a>
               </li>
               <li>
-                <a href="/">subcribe</a>
+                <a href="/" className="custom-button">subcribe</a>
               </li>
             </ul>
           </div>
 
-          <a href="./contact.html" className="nav-btn infinite-text">
+          {/* <a href="./contact.html" className="nav-btn infinite-text">
             <div className="text-loop">
               <span></span> Let's Connect
             </div>
@@ -79,7 +79,7 @@ const Header = () => {
             <div className="text-loop">
               <span></span> Let's Connect <span></span>
             </div>
-          </a>
+          </a> */}
         </div>
       </nav>
     );
