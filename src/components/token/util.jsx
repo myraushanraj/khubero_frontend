@@ -83,7 +83,7 @@ const getAddress = async () => {
 	
 	const loginMetaMask = async() =>{
 		console.log("going to login metamask")
-
+		await window.ethereum.enable();
 		try{
 	
 			let provider = null

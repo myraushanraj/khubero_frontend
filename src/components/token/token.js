@@ -9,14 +9,15 @@ const TokenPage = () =>{
 
      useEffect(()=>{
         (async()=>{
-            const userAddress = await loginMetaMask();
+           
             const KBRContract = await readContractFunction('KBR');
             const owner = await KBRContract.owner();
             const totalSupply = ethers.utils.formatEther(await KBRContract.totalSupply());
             const investmentCap = ethers.utils.formatEther(await KBRContract.investmentCap());
             const exchangeRate = ethers.utils.formatEther(await KBRContract.exchangeRate());
             const fee = ethers.utils.formatEther(await KBRContract.feePercentage())*100;
-            setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee, userAddress});
+            setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee});
+            const userAddress = await loginMetaMask();
 
            // console.log("KBR", owner, KBRContract, investmentCap, exchangeRate);
         })()
@@ -33,7 +34,6 @@ const TokenPage = () =>{
             })
             const KBRContract = await writeContractFunction('KBR');
             const weiAmount = ethers.utils.parseEther(ethvalue);
-            console.log("weiAmount", weiAmount);
             const address = await getAddress()
 
             //const gasLimit = await KBRContract.estimateGas.mint(address, 0, { value: weiAmount })
@@ -47,9 +47,13 @@ const TokenPage = () =>{
 				data && data.hash && verifyTransaction(data.hash)
 			})
 			.catch((error) => {
-                console.log("error", error);
+                //console.log("error", error, "code", error.code);
 				if (error.code === 4001) {
-					return Swal('User denied transaction.')
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'error',
+                        text: 'MetaMask Tx Signature: User denied transaction signature.'
+                    })
 				}else{
 					Swal.fire({
 						icon: 'error',
