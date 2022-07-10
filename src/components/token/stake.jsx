@@ -72,8 +72,32 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
             }
             
         })
+    },
+    withdrawReward = async() =>{
+        const stakeContract = await writeContractFunction('STAKES');
+        stakeContract.withdrawReward().then((data) => {
+           
+            data && data.hash && verifyTransaction(data.hash)
+        })
+        .catch((error) => {
+            console.log("error", error)
+            if (error.code === 4001) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'error',
+                    text: 'MetaMask Tx Signature: User denied transaction signature.'
+                })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!'
+                })
+            }
+            
+        })
     }
-    console.log("data", data)
+
 
     return(
         <>
@@ -110,17 +134,22 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
             </div>
                 </div>
                 <div className="col-md-6">
-                    <div className="col-md-6">
+                    <div className="col-md-7">
                         <div className='box'>
                             <h3>KBR Token</h3>
                             <p>{data.kbrBalance}</p>
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        {/* <div className='box'>
-                            <h3>Staked Amount</h3>
-                            <p>{data.kbrBalance}</p>
-                        </div> */}
+                    <div className="col-md-7">
+                        <div className='box'>
+                            <h3>Total Staked Token</h3>
+                            <p>{data.totalStakedAmount}</p>
+                        </div>
+                    </div>
+                    <div className="col-md-7">
+                        <div className='box'>
+                            <button className="btn btn-success" onClick={withdrawReward}> Withdraw Reward</button>
+                        </div>
                     </div>
                 </div>
 

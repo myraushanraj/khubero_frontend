@@ -689,20 +689,13 @@ export const contractDetails = {
             }
         ],
 		address: {
-			4: '0x953eAeC9750c6715E8F83C1D88ec329d433FADED'
+			4: '0x606e878662024B1D0cdBF6687d02cd316FAfF08b'
 		}
 	},
     STAKES: {
 		name: 'STAKE',
 		tokenImage: 'token icon image path',
 		abi: [
-            {
-                "inputs": [],
-                "name": "allowWithdrawal",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
             {
                 "inputs": [
                     {
@@ -772,13 +765,6 @@ export const contractDetails = {
                 "type": "event"
             },
             {
-                "inputs": [],
-                "name": "renounceOwnership",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
                 "anonymous": false,
                 "inputs": [
                     {
@@ -798,43 +784,6 @@ export const contractDetails = {
                 "type": "event"
             },
             {
-                "inputs": [
-                    {
-                        "internalType": "uint256",
-                        "name": "_amount",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "stakeToken",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "newOwner",
-                        "type": "address"
-                    }
-                ],
-                "name": "transferOwnership",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [],
-                "name": "withdrawReward",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "stateMutability": "payable",
-                "type": "receive"
-            },
-            {
                 "inputs": [],
                 "name": "ALLOW_WITHDRAWAL",
                 "outputs": [
@@ -845,6 +794,39 @@ export const contractDetails = {
                     }
                 ],
                 "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "FINAL_REWARD_ETH_TO_WITHDRAW",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "FINAL_STAKED_TOKENS",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "allowWithdrawal",
+                "outputs": [],
+                "stateMutability": "nonpayable",
                 "type": "function"
             },
             {
@@ -904,32 +886,6 @@ export const contractDetails = {
                     }
                 ],
                 "name": "calculateTotalRewardToWithdraw",
-                "outputs": [
-                    {
-                        "internalType": "uint256",
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [],
-                "name": "FINAL_REWARD_ETH_TO_WITHDRAW",
-                "outputs": [
-                    {
-                        "internalType": "uint256",
-                        "name": "",
-                        "type": "uint256"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [],
-                "name": "FINAL_STAKED_TOKENS",
                 "outputs": [
                     {
                         "internalType": "uint256",
@@ -1115,10 +1071,54 @@ export const contractDetails = {
                 ],
                 "stateMutability": "view",
                 "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "renounceOwnership",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "_amount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "stakeToken",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "newOwner",
+                        "type": "address"
+                    }
+                ],
+                "name": "transferOwnership",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "withdrawReward",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "stateMutability": "payable",
+                "type": "receive"
             }
         ],
 		address: {
-			4: '0x63760814571e63c410F6eB7FA30B7f4dC3eCb137'
+			4: '0xEDe1454D7F7dC3dC7Abb731A42B0197E91Efc2bb'
 		}
 	}
 

@@ -3,6 +3,7 @@ import {writeContractFunction, readContractFunction, verifyTransaction, getAddre
 import {ethers} from 'ethers';
 import Swal from 'sweetalert2';
 import Stake from './stake';
+import Admin from './admin';
 import { contractDetails } from '../blockchain/contractDetails';
 
 const TokenPage = () =>{
@@ -25,9 +26,14 @@ const TokenPage = () =>{
         console.log("stake addres", contractDetails.STAKES.address[4]);
         const stakeAddress = contractDetails.STAKES.address[4];
         const allowance = await KBRContract.allowance(userAddress, stakeAddress);
-        setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee,minInvestment, allowance: Number(allowance), kbrBalance});
+        const totalStakedAmount = ethers.utils.formatEther(await stakesContract.getTotalStakeAmount());
+        console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getTotalStakeAmount())
+
+        console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getStakeInfo(userAddress, 1))
+        setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee,minInvestment, allowance: Number(allowance), kbrBalance, totalStakedAmount});
 
         console.log("stakesContract",stakesContract);
+        //0x75E0538B84a84625e6E75AcF1e61d0B816098A95,1000000000000000000,1000000000,100000000000000000,2
     }
      useEffect(()=>{
        
@@ -38,7 +44,7 @@ const TokenPage = () =>{
         setData({...data, [name]:value});
     }
     const mint = async() =>{
-        if(ethvalue && (ethvalue > 1|| ethvalue == 1)){
+        if(ethvalue && (ethvalue > data.minInvestment || ethvalue == data.minInvestment)){
             Swal.fire({
                 title: 'Confirm',
                 text: 'Waiting for Metamask Confirmation..'
@@ -163,6 +169,7 @@ const TokenPage = () =>{
         </div>
     </div>
     <Stake initValue={initValue} data = {data} setData={setData} stakesContract = {stakesContract} verifyTransaction = {verifyTransaction} writeContractFunction={writeContractFunction}/>
+    <Admin initValue={initValue} data = {data} setData={setData} stakesContract = {stakesContract} verifyTransaction = {verifyTransaction} writeContractFunction={writeContractFunction}/>
     </>
 
     )
