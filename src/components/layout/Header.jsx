@@ -1,19 +1,26 @@
 import logo from "../../assets/img/logo/logo.svg";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+    useEffect(() => {
+      window.addEventListener("scroll", () => {
+        setScroll(window.scrollY > 10);
+      });
+    }, []);
 
   function mobileMenu() {
     setToggle(!toggle);
   }
     return (
-      <nav className="">
-        <a href="/">
+      <nav className={scroll ? "header-bg" : ""}>
+        <a href="#home">
           <img src={logo} alt="logo" className="logo" />
         </a>
 
-        <button type="button" onClick={mobileMenu} className="button_container hide">
+        <button type="button" onClick={mobileMenu} className="button_container">
           <svg
             className={
               toggle ? "ham hamRotate ham7 active" : "ham hamRotate ham7"
@@ -33,53 +40,38 @@ const Header = () => {
           </svg>
         </button>
 
-        <div className={toggle ? "hamburger_menu open hide" : "hamburger_menu hide"}>
+        <div className={toggle ? "hamburger_menu open" : "hamburger_menu"}>
           <div className="nav-links">
             <ul>
               <li className="">
-                <a href="/">Vision</a>
+                <a href="#vision">Vision</a>
               </li>
               <li>
-                <a href="/">characteristics</a>
+                <a href="#characteristics">characteristics</a>
               </li>
               <li>
-                <a href="/">invest with us</a>
+                <a href="#tokenomics">tokenomics</a>
               </li>
               <li>
-                <a href="/">tokenomics</a>
+                <a href="#team">team</a>
               </li>
-              <li>
+              {/* <li>
+                <a href="#invest">invest with us</a>
+              </li> */}
+              {/* <li>
                 <a href="/">Roadmap</a>
-              </li>
+              </li> */}
               <li>
-                <a href="/">team</a>
+                <a href="#get-coin">how to buy</a>
               </li>
-              <li>
-                <a href="/">how to buy</a>
-              </li>
-              <li>
+              {/* <li>
                 <a href="/">branding</a>
-              </li>
-              <li>
-                <a href="/" className="custom-button">subcribe</a>
+              </li> */}
+              <li className="header-btn-wrap">
+                <a href="#subscribe" className="custom-button">subcribe</a>
               </li>
             </ul>
           </div>
-
-          {/* <a href="./contact.html" className="nav-btn infinite-text">
-            <div className="text-loop">
-              <span></span> Let's Connect
-            </div>
-            <div className="text-loop">
-              <span></span> Let's Connect
-            </div>
-            <div className="text-loop">
-              <span></span> Let's Connect
-            </div>
-            <div className="text-loop">
-              <span></span> Let's Connect <span></span>
-            </div>
-          </a> */}
         </div>
       </nav>
     );

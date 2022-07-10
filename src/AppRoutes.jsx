@@ -6,7 +6,7 @@ const AppRoutes = () => (
     <BrowserRouter>
       <Routes>
         <Route path="/*" element={<Layout />}>
-        <Route index element={<TokenPage />} />
+        <Route index element={<Home />} />
         <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
