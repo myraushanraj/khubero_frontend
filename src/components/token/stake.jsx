@@ -80,7 +80,7 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
             data && data.hash && verifyTransaction(data.hash)
         })
         .catch((error) => {
-            console.log("error", error)
+            console.log("error in reward", error)
             if (error.code === 4001) {
                 Swal.fire({
                     icon: 'error',

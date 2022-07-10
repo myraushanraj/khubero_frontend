@@ -27,9 +27,9 @@ const TokenPage = () =>{
         const stakeAddress = contractDetails.STAKES.address[4];
         const allowance = await KBRContract.allowance(userAddress, stakeAddress);
         const totalStakedAmount = ethers.utils.formatEther(await stakesContract.getTotalStakeAmount());
-        console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getTotalStakeAmount())
+        // console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getTotalStakeAmount())
 
-        console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getStakeInfo(userAddress, 1))
+        // console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getStakeInfo(userAddress, 1))
         setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee,minInvestment, allowance: Number(allowance), kbrBalance, totalStakedAmount});
 
         console.log("stakesContract",stakesContract);
