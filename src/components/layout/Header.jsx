@@ -71,7 +71,7 @@ const Header = () => {
                   <a href="/">branding</a>
                 </li> */}
                 <li className="header-btn-wrap">
-                  <a href="#subscribe" className="custom-button">subcribe</a>
+                  <a href="#subscribe" className="custom-button">App</a>
                 </li>
               </ul>
             </div>
