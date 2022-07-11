@@ -60,6 +60,7 @@ const Admin = ({writeContractFunction, verifyTransaction})=>{
          {/* <h2 className="title text-center">Admin</h2> */}
          <div className="text-center pb-4">
             <ContentTitle title="Admin" />
+            <br/> <br/>
          </div>
          <Row className="g-5 justify-content-center">
             <Col md="6" lg='4' className="d-flex justify-content-center justify-content-md-end mt-0">

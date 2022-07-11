@@ -61,7 +61,7 @@ const TokenPage = () =>{
             KBRContract.mint({
 				value: weiAmount,
 			}).then((data) => {
-				data && data.hash && verifyTransaction(data.hash)
+				data && data.hash && verifyTransaction(data.hash, initValue)
 			})
 			.catch((error) => {
 				if (error.code === 4001) {
@@ -177,7 +177,7 @@ const TokenPage = () =>{
               <div className="buttonWrapper">
                 <button className='form-btn' onClick={mint}>Submit</button>
               </div>
-              <br />
+        
               <label className="custom-label">Get Balance </label>
               <input
                 className="token-input"

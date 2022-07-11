@@ -22,10 +22,8 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
             const stakesContract= await writeContractFunction("STAKES");
             const weiAmount = ethers.utils.parseEther(kbrToken);
              stakesContract.stakeToken(weiAmount).then((data) => {
-                 setTimeout(()=>{
-                     initValue();
-                 }, 6000);
-                 data && data.hash && verifyTransaction(data.hash)
+               
+                 data && data.hash && verifyTransaction(data.hash, initValue)
              })
              .catch((error) => {
                  console.log("error", error)
@@ -52,10 +50,8 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
         const stakeAddress = contractDetails.STAKES.address[4];
         const weiAmount = ethers.utils.parseEther('1000000');
         KBRContract.increaseAllowance(stakeAddress, weiAmount).then((data) => {
-            setTimeout(()=>{
-                initValue();
-            }, 6000);
-            data && data.hash && verifyTransaction(data.hash)
+           
+            data && data.hash && verifyTransaction(data.hash, initValue)
         })
         .catch((error) => {
             console.log("error", error)
@@ -116,8 +112,8 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
                         <input className="token-input" placeholder='KBR value' name="ethVal" onChange={(e)=>setKbr(e.target.value)}/>
                         <br/>
                         <div className="d-flex align-items-center justify-content-between">
-                            <label className="info-text text-secondary">Min investment >= 100 KBR </label>
-                            <label className="info-text text-end text-secondary">{`Max investment <= 100000 KBR`} </label>
+                            <label className="info-text text-secondary">Min investment >= 1 KBR </label>
+                            <label className="info-text text-end text-secondary">{`Max investment <= 100KBR`} </label>
                         </div>
 
 
@@ -148,12 +144,12 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
                                 <p>{data.kbrBalance}</p>
                             </div>
                         </Col>
-                        <Col md='6'>
+                        {/* <Col md='6'>
                             <div className='box'>
                                 <h3>Total Staked Token</h3>
                                 <p>{data.totalStakedAmount}</p>
                             </div>
-                        </Col>
+                        </Col> */}
                         <Col>
                             <div className="d-flex justify-content-center">
                                 <div className='buttonWrapper mt-0'>

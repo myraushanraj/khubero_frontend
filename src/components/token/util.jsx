@@ -39,7 +39,7 @@ const readContractFunction = async (token) => {
 
 
 
-const verifyTransaction = (hash) => {
+const verifyTransaction = (hash, initValue) => {
 	Swal.fire({
 		title: 'Sent to Blockchain',
 		html: `<p>Waiting for Blockchain Confirmation...</p>
@@ -49,6 +49,7 @@ const verifyTransaction = (hash) => {
 	const mProviderInner = getMetaMask()
 	mProviderInner.waitForTransaction(hash).then(async (result) => {
 		if (result.status) {
+			initValue && initValue()
 			Swal.fire({
 				icon: 'success',
 				html: `<p>Transaction Successful</p>
