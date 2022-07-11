@@ -9,7 +9,7 @@ import { Title } from "../util";
 
 const Home = () => {
   return (
-    <>
+    <div className="home-page">
       <Banner />
       <About />
       <Characteristics />
@@ -17,7 +17,7 @@ const Home = () => {
       <Team />
       <Coin />
       <Subscribe />
-   </>
+   </div>
   );
 };
 

@@ -1,0 +1,175 @@
+.revenueWrapper {
+  // margin-top: 115px;
+  padding-top: 183px;
+}
+
+.box {
+  box-shadow: 10px 10px 20px rgb(0 0 0 / 25%),
+      -10px -10px 20px rgb(0 255 255 / 5%);
+  border: 1px solid rgba($color: $primary, $alpha: 0.5);
+  border-radius: 15px;
+  padding: 1.5rem 0;
+  background: #131517;
+  color: #fff;
+  min-width: 90%;
+  text-align: center;
+  // margin-top: 30px;
+  // margin-left: 27px;
+  // min-height: 98px;
+  height: 100%;
+  h3,
+  p {
+    text-align: center;
+  }
+
+  h3 {
+    @media (max-width: 1200px) {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    @media (max-width: 1200px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.revenue-form-wrapper {
+  // margin: auto;
+  // width: 494px;
+  // background: linear-gradient(101.71deg, rgba(255, 255, 255, 0.1) 0.89%, rgba(255, 255, 255, 0.16) 73.38%);
+  box-shadow: 10px 10px 20px rgb(0 0 0 / 25%),
+    -10px -10px 20px rgb(0 255 255 / 5%);
+  /* Note: backdrop-filter has minimal browser support */
+  border: 1px solid rgba($color: $primary, $alpha: 0.5);
+  border-radius: 30px;
+  padding: 40px;
+  position: relative;
+
+  @media (max-width: 600px) {
+    padding: 35px;
+  }
+
+  label,
+  input {
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  .token-input {
+    margin-top: 10px;
+    font-size: 22px;
+    line-height: 28px;
+    padding: 15px;
+    border: 1px solid $white;
+    border-radius: 10px;
+    background: transparent;
+  }
+  label {
+    margin-top: 20px;
+
+    &.custom-label {
+      font-size: 30px;
+      line-height: 42px;
+
+      @media (max-width: 1200px) {
+        font-size: 26px;
+        line-height: 38px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 22px;
+        line-height: 35px;
+      }
+    }
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #ffffff;
+  }
+}
+.left-text {
+  width: 534px;
+  margin: auto;
+  padding-top: 100px;
+  h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 65px;
+    color: #f87a11;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #ffffff;
+  }
+}
+.hide {
+  display: none;
+}
+
+.info-text {
+  font-size: 18px;
+  line-height: 22px;
+
+  @media (max-width: 1200px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
+
+div.buttonWrapper {
+    width: fit-content;
+    padding: 15px 35px;
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    background: #171717;
+    border-radius: 12px;
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 25%),
+      -10px -10px 20px rgb(0 255 255 / 5%);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    &:hover {
+      box-shadow: none;
+
+      button {
+        color: $primary;
+      }
+    }
+
+    @media (max-width: 1440px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 24px;
+      border-radius: 10px;
+      padding: 10px 30px;
+    }
+
+    button {
+      color: $white;
+      transition: all .3s ease;
+    }
+  }

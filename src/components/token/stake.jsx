@@ -2,6 +2,8 @@ import { useState } from "react";
 import Swal from 'sweetalert2';
 import {ethers} from 'ethers';
 import { contractDetails } from "../blockchain/contractDetails";
+import ContentTitle from "../contentTitle";
+import { Col, Row } from "react-bootstrap";
 
 
 
@@ -101,59 +103,68 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
 
     return(
         <>
-        <div className="stakeWrapper revenueWrapper">
-            <h2 className="title text-center">Staking</h2>
-            <div className="row">
-                <div className='col-md-6'>
-            <div className='revenue-form-wrapper'>
-                <p>Stake</p>
-                <label>KHUBERO </label>
-                <input placeholder='KBR value' name="ethVal" onChange={(e)=>setKbr(e.target.value)}/>
-                <br/>
-             <label>Min investment >= 100 KBR </label>{}
-                <label>{`Max investment <= 100000 KBR`} </label>
+        <div className="stakeWrapper padding-inline"> {/* revenueWrapper */}
+            {/* <h2 className="title text-center">Staking</h2> */}
+            <div className="text-center py-5"><ContentTitle title='Staking' /></div>
+
+            <Row className="g-5">
+                <Col xl='6'>
+                    <div className='revenue-form-wrapper'>
+                        {/* <p>Stake</p> */}
+                        <ContentTitle title='Stake' />
+                        <label className="custom-label">KHUBERO </label>
+                        <input className="token-input" placeholder='KBR value' name="ethVal" onChange={(e)=>setKbr(e.target.value)}/>
+                        <br/>
+                        <div className="d-flex align-items-center justify-content-between">
+                            <label className="info-text text-secondary">Min investment >= 100 KBR </label>
+                            <label className="info-text text-end text-secondary">{`Max investment <= 100000 KBR`} </label>
+                        </div>
 
 
-                
-                <div className='buttonWrapper'>
-                    <button onClick={stake} disabled = {data.allowance < 10} >Submit</button>
-                </div>
-                <br/>
-                { !data.allowance &&
-                     <div>
-                    
-                     <p>Please approve for stakes</p>
-                     <div className='buttonWrapper'>
-                         <button onClick={approve}>Approve</button>
-                     </div>
-                     </div>
                         
-                    }
-               
-                <br/>
-            </div>
-                </div>
-                <div className="col-md-6">
-                    <div className="col-md-7">
-                        <div className='box'>
-                            <h3>KBR Token</h3>
-                            <p>{data.kbrBalance}</p>
+                        <div className='buttonWrapper'>
+                            <button onClick={stake} disabled = {data.allowance < 10} >Submit</button>
                         </div>
+                        <br/>
+                        { !data.allowance &&
+                            <div>
+                            
+                            <ContentTitle title='Please approve for stakes' />
+                            <div className='buttonWrapper'>
+                                <button onClick={approve}>Approve</button>
+                            </div>
+                            </div>
+                                
+                            }
+                    
+                        <br/>
                     </div>
-                    <div className="col-md-7">
-                        <div className='box'>
-                            <h3>Total Staked Token</h3>
-                            <p>{data.totalStakedAmount}</p>
-                        </div>
-                    </div>
-                    <div className="col-md-7">
-                        <div className='box'>
-                            <button className="btn btn-success" onClick={withdrawReward}> Withdraw Reward</button>
-                        </div>
-                    </div>
-                </div>
+                </Col>
+                <Col xl='6'>
+                    <Row className="g-5">
+                        <Col md='6'>
+                            <div className='box'>
+                                <h3>KBR Token</h3>
+                                <p>{data.kbrBalance}</p>
+                            </div>
+                        </Col>
+                        <Col md='6'>
+                            <div className='box'>
+                                <h3>Total Staked Token</h3>
+                                <p>{data.totalStakedAmount}</p>
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="d-flex justify-content-center">
+                                <div className='buttonWrapper mt-0'>
+                                    <button onClick={withdrawReward}> Withdraw Reward</button>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Col>
 
-            </div>
+            </Row>
         </div>
       
         </>

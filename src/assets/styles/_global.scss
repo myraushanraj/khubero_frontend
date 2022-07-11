@@ -14,10 +14,7 @@ body {
   color: $white;
   font-weight: 400;
   background-color: $dark;
-  background-image: url(../img/banners/banner-bg.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100% contain;
+  
   line-height: 42px;
   scroll-behavior: smooth;
 
@@ -49,10 +46,7 @@ body {
   @media (max-width: 820px) {
     font-size: 18px;
     line-height: 30px;
-  }
-
-  @media (max-width: 560px) {
-    background-size: 150vh;
+    overflow-x: hidden;
   }
 }
 

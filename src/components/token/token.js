@@ -5,6 +5,8 @@ import Swal from 'sweetalert2';
 import Stake from './stake';
 import Admin from './admin';
 import { contractDetails } from '../blockchain/contractDetails';
+import { Col, Row } from 'react-bootstrap';
+import ContentTitle from '../contentTitle';
 
 const TokenPage = () =>{
     const [data, setData] = useState({});
@@ -105,74 +107,109 @@ const TokenPage = () =>{
         }
         
     }
-    return(
-        <>
-        <div className='row revenueWrapper'>
-        <div className='col-md-6'>
-            <div className='col-md-6'>
-                <div className='box'>
-                    <h3>ERC20 Token</h3>
-                    <p>KhuberoToken(KBR)</p>
+    return (
+      <>
+        <Row className="g-5 revenueWrapper padding-block padding-inline">
+          <Col xl={6}>
+            <Row className="g-xl-5 g-4">
+              <Col xl={6} md={4}>
+                <div className="box">
+                  <h3>ERC20 Token</h3>
+                  <p>KhuberoToken(KBR)</p>
                 </div>
-            </div>
-            <div className='col-md-6'>
-                <div className='box'>
-                    <h3>Owner</h3>
-                    <p>{ data.owner ? `0x...${data.owner.substr(data.owner.length - 5)}` : ''  } </p>
+              </Col>
+              <Col xl={6} md="4">
+                <div className="box">
+                  <h3>Owner</h3>
+                  <p>
+                    {data.owner
+                      ? `0x...${data.owner.substr(data.owner.length - 5)}`
+                      : ""}{" "}
+                  </p>
                 </div>
-            </div>
-            <div className='col-md-6'>
-                <div className='box'>
-                    <h3>Total Supply</h3>
-                    <p>{data.totalSupply}</p>
+              </Col>
+              <Col xl={6} md="4">
+                <div className="box">
+                  <h3>Total Supply</h3>
+                  <p>{data.totalSupply}</p>
                 </div>
-            </div>
-            <div className='col-md-6'>
-                <div className='box'>
-                    <h3>investment Cap</h3>
-                    <p>{data.investmentCap} ETH</p>
+              </Col>
+              <Col xl={6} md="4">
+                <div className="box">
+                  <h3>investment Cap</h3>
+                  <p>{data.investmentCap} ETH</p>
                 </div>
-            </div>
-            <div className='col-md-6'>
-                <div className='box'>
-                    <h3>Exchange Rate</h3>
-                    <p>{data.exchangeRate}</p>
+              </Col>
+              <Col xl={6} md={4}>
+                <div className="box">
+                  <h3>Exchange Rate</h3>
+                  <p>{data.exchangeRate}</p>
                 </div>
-            </div>
-            <div className='col-md-6'>
-                <div className='box'>
-                    <h3>Fee</h3>
-                    <p>{data.fee}%</p>
+              </Col>
+              <Col xl={6} md="4">
+                <div className="box">
+                  <h3>Fee</h3>
+                  <p>{data.fee}%</p>
                 </div>
-            </div>
-        </div>
-        <div className='col-md-6'>
-            <div className='revenue-form-wrapper'>
-                <p>Mint</p>
-                <label>ETH </label>
-                <input placeholder='ETH value' name="ethVal"  onChange = {(e)=>{setEthValue(e.target.value)}}/>
-                <br/>
-               {data.minInvestment &&  <label>Min investment >={data.minInvestment} Ether</label>}
+              </Col>
+            </Row>
+          </Col>
+          <Col xl={6}>
+            <div className="revenue-form-wrapper">
+              {/* <p className=''>Mint</p> */}
+              <ContentTitle title="Mint" />
+              <label className="custom-label">ETH </label>
+              <input
+                className="token-input"
+                placeholder="ETH value"
+                name="ethVal"
+                onChange={(e) => {
+                  setEthValue(e.target.value);
+                }}
+              />
+              <br />
+              {data.minInvestment && (
+                <label className="custom-label">
+                  Min investment >={data.minInvestment} Ether
+                </label>
+              )}
 
-                
-                <div className='buttonWrapper'>
-                    <button onClick={mint}>Submit</button>
-                </div>
-                <br/>
-                <label>Get Balance </label>
-                <input placeholder='Enter Address' name="ethAddress" onChange = {onChange} />
-                {data.tokenBal && <label>{data.tokenBal} KBR</label>}
-                <div className='buttonWrapper'>
-                    <button onClick={getBal}>Get</button>
-                </div>
+              <div className="buttonWrapper">
+                <button className='form-btn' onClick={mint}>Submit</button>
+              </div>
+              <br />
+              <label className="custom-label">Get Balance </label>
+              <input
+                className="token-input"
+                placeholder="Enter Address"
+                name="ethAddress"
+                onChange={onChange}
+              />
+              {data.tokenBal && <label>{data.tokenBal} KBR</label>}
+              <div className="buttonWrapper">
+                <button className='form-btn' onClick={getBal}>Get</button>
+              </div>
             </div>
-        </div>
-    </div>
-    <Stake initValue={initValue} data = {data} setData={setData} stakesContract = {stakesContract} verifyTransaction = {verifyTransaction} writeContractFunction={writeContractFunction}/>
-    <Admin initValue={initValue} data = {data} setData={setData} stakesContract = {stakesContract} verifyTransaction = {verifyTransaction} writeContractFunction={writeContractFunction}/>
-    </>
-
-    )
+          </Col>
+        </Row>
+        <Stake
+          initValue={initValue}
+          data={data}
+          setData={setData}
+          stakesContract={stakesContract}
+          verifyTransaction={verifyTransaction}
+          writeContractFunction={writeContractFunction}
+        />
+        <Admin
+          initValue={initValue}
+          data={data}
+          setData={setData}
+          stakesContract={stakesContract}
+          verifyTransaction={verifyTransaction}
+          writeContractFunction={writeContractFunction}
+        />
+      </>
+    );
 }
 
 export default TokenPage;

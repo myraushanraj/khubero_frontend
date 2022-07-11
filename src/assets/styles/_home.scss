@@ -267,3 +267,14 @@
         margin: 35px 0;
     }
 }
+
+.home-page {
+    background-image: url(../img/banners/banner-bg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% contain;
+
+    @media (max-width: 560px) {
+        background-size: 150vh;
+    }
+}
