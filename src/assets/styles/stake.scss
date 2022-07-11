@@ -1,0 +1,17 @@
+.stakeWrapper{
+    .title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 32px;
+        letter-spacing: 3px;
+        color: #AEACFF;
+        margin: 50px 0px 55px 0px;
+    }
+    button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+}

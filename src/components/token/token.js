@@ -2,32 +2,49 @@ import { useEffect, useState } from 'react';
 import {writeContractFunction, readContractFunction, verifyTransaction, getAddress, getMetaMask, loginMetaMask} from './util';
 import {ethers} from 'ethers';
 import Swal from 'sweetalert2';
+import Stake from './stake';
+import Admin from './admin';
+import { contractDetails } from '../blockchain/contractDetails';
 
 const TokenPage = () =>{
     const [data, setData] = useState({});
     const [ethvalue, setEthValue] = useState();
+    const [stakesContract, setStakesContract] = useState();
+    const initValue =  async()=>{
+        const userAddress = await loginMetaMask();
 
+        const KBRContract = await readContractFunction('KBR');
+        const stakesContract = await readContractFunction('STAKES');
+        setStakesContract(stakesContract);
+        const owner = await KBRContract.owner();
+        const totalSupply = ethers.utils.formatEther(await KBRContract.totalSupply());
+        const investmentCap = ethers.utils.formatEther(await KBRContract.investmentCap());
+        const exchangeRate = ethers.utils.formatEther(await KBRContract.exchangeRate());
+        const fee = ethers.utils.formatEther(await KBRContract.feePercentage())*100;
+        const minInvestment =  ethers.utils.formatEther(await KBRContract.minInvestment());
+        const kbrBalance =  ethers.utils.formatEther(await KBRContract.balanceOf(userAddress));
+        console.log("stake addres", contractDetails.STAKES.address[4]);
+        const stakeAddress = contractDetails.STAKES.address[4];
+        const allowance = await KBRContract.allowance(userAddress, stakeAddress);
+        const totalStakedAmount = ethers.utils.formatEther(await stakesContract.getTotalStakeAmount());
+        // console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getTotalStakeAmount())
+
+        // console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getStakeInfo(userAddress, 1))
+        setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee,minInvestment, allowance: Number(allowance), kbrBalance, totalStakedAmount});
+
+        console.log("stakesContract",stakesContract);
+        //0x75E0538B84a84625e6E75AcF1e61d0B816098A95,1000000000000000000,1000000000,100000000000000000,2
+    }
      useEffect(()=>{
-        (async()=>{
-           
-            const KBRContract = await readContractFunction('KBR');
-            const owner = await KBRContract.owner();
-            const totalSupply = ethers.utils.formatEther(await KBRContract.totalSupply());
-            const investmentCap = ethers.utils.formatEther(await KBRContract.investmentCap());
-            const exchangeRate = ethers.utils.formatEther(await KBRContract.exchangeRate());
-            const fee = ethers.utils.formatEther(await KBRContract.feePercentage())*100;
-            setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee});
-            const userAddress = await loginMetaMask();
-
-           // console.log("KBR", owner, KBRContract, investmentCap, exchangeRate);
-        })()
+       
+        initValue();
     }, [])
     const onChange = (e) =>{
         const {name, value} = e.target;
         setData({...data, [name]:value});
     }
     const mint = async() =>{
-        if(ethvalue && (ethvalue > 1|| ethvalue == 1)){
+        if(ethvalue && (ethvalue > data.minInvestment || ethvalue == data.minInvestment)){
             Swal.fire({
                 title: 'Confirm',
                 text: 'Waiting for Metamask Confirmation..'
@@ -41,13 +58,10 @@ const TokenPage = () =>{
 	        const gasPrice = await mProvider.getGasPrice()
             KBRContract.mint({
 				value: weiAmount,
-				// gasPrice: gasPrice,
-				// gasLimit: Number(gasLimit) + 1000
 			}).then((data) => {
 				data && data.hash && verifyTransaction(data.hash)
 			})
 			.catch((error) => {
-                //console.log("error", error, "code", error.code);
 				if (error.code === 4001) {
                     Swal.fire({
                         icon: 'error',
@@ -62,7 +76,6 @@ const TokenPage = () =>{
 					})
 				}
 				
-				// dispatch(metamaskError(error))
 			})
 
         }
@@ -93,6 +106,7 @@ const TokenPage = () =>{
         
     }
     return(
+        <>
         <div className='row revenueWrapper'>
         <div className='col-md-6'>
             <div className='col-md-6'>
@@ -138,7 +152,7 @@ const TokenPage = () =>{
                 <label>ETH </label>
                 <input placeholder='ETH value' name="ethVal"  onChange = {(e)=>{setEthValue(e.target.value)}}/>
                 <br/>
-                <label>Min investment >=1 Ether</label>
+               {data.minInvestment &&  <label>Min investment >={data.minInvestment} Ether</label>}
 
                 
                 <div className='buttonWrapper'>
@@ -154,6 +168,9 @@ const TokenPage = () =>{
             </div>
         </div>
     </div>
+    <Stake initValue={initValue} data = {data} setData={setData} stakesContract = {stakesContract} verifyTransaction = {verifyTransaction} writeContractFunction={writeContractFunction}/>
+    <Admin initValue={initValue} data = {data} setData={setData} stakesContract = {stakesContract} verifyTransaction = {verifyTransaction} writeContractFunction={writeContractFunction}/>
+    </>
 
     )
 }

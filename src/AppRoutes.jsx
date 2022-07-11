@@ -7,6 +7,7 @@ const AppRoutes = () => (
       <Routes>
         <Route path="/*" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="token" element={<TokenPage />} />
         <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
