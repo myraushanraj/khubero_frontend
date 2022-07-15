@@ -6,10 +6,12 @@ import Subscribe from "../subscribe";
 import Team from "../team";
 import Tokenomics from "../tokenomics";
 import { Title } from "../util";
+import Loader from '../loader'
 
 const Home = () => {
   return (
     <div className="home-page">
+      <Loader />
       <Banner />
       <About />
       <Characteristics />

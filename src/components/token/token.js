@@ -7,6 +7,7 @@ import Admin from './admin';
 import { contractDetails } from '../blockchain/contractDetails';
 import { Col, Row } from 'react-bootstrap';
 import ContentTitle from '../contentTitle';
+import Loader from '../loader';
 
 const TokenPage = () =>{
     const [data, setData] = useState({});
@@ -112,6 +113,8 @@ const TokenPage = () =>{
     }
     return (
       <>
+        <Loader />
+
         <Row className="g-5 revenueWrapper padding-block padding-inline">
           <Col xl={6}>
             <Row className="g-xl-5 g-4">

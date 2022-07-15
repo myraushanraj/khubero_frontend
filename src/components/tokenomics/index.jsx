@@ -8,18 +8,18 @@ import ChartData from './ChartData';
 const Tokenomics = () => {
   return (
     <div className='' id='tokenomics'>
-        <div className="padding-block">
-            <SectionTitle title="TOKENOMICS" />
-        </div>
 
         <div className="tokenomics-wrap bg-black">
+            <div className="padding-bottom">
+                <SectionTitle title="TOKENOMICS" />
+            </div>
             <Row className='align-items-center'>
                 <Col xl='6'>
                     <div className="chart-bg">
                         <Chart />
 
                         <div className="token-circle">
-                            <img src={token} alt="" />
+                            {/* <img src={token} alt="" /> */}
                         </div>
                     </div>
                 </Col>

@@ -8,7 +8,7 @@ const Loader = () => {
 
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 6000);
   }, []);
 
   return (

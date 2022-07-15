@@ -22,7 +22,7 @@ const Header = () => {
           <img src={logo} alt="logo" className="logo" />
         </Link>
 
-        <div className={location === '/token' ? 'hide' : "nav-items-wrap"}>
+        <div className="nav-items-wrap">
           <button type="button" onClick={mobileMenu} className="button_container">
             <svg
               className={
@@ -46,25 +46,25 @@ const Header = () => {
           <div className={toggle ? "hamburger_menu open" : "hamburger_menu"}>
             <div className="nav-links">
               <ul>
-                <li className="">
+                <li className={location === "/app" ? "hide" : ""}>
                   <a href="/#vision">Vision</a>
                 </li>
-                <li>
+                <li className={location === "/app" ? "hide" : ""}>
                   <a href="#characteristics">characteristics</a>
                 </li>
-                <li>
+                <li className={location === "/app" ? "hide" : ""}>
                   <a href="#tokenomics">tokenomics</a>
                 </li>
-                <li>
+                <li className={location === "/app" ? "hide" : ""}>
                   <a href="#team">team</a>
                 </li>
-                {/* <li>
+                {/* <li className={location === "/app" ? "hide" : ""}>
                   <a href="#invest">invest with us</a>
                 </li> */}
-                {/* <li>
+                {/* <li className={location === "/app" ? "hide" : ""}>
                   <a href="/">Roadmap</a>
                 </li> */}
-                <li>
+                <li className={location === "/app" ? "hide" : ""}>
                   <a href="#get-coin">how to buy</a>
                 </li>
                 {/* <li>
