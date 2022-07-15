@@ -38,8 +38,11 @@ const TokenPage = () =>{
         //0x75E0538B84a84625e6E75AcF1e61d0B816098A95,1000000000000000000,1000000000,100000000000000000,2
     }
      useEffect(()=>{
-       
+    
+        window.scrollTo(0, 0)
+
         initValue();
+        
     }, [])
     const onChange = (e) =>{
         const {name, value} = e.target;

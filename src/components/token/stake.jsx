@@ -11,7 +11,7 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
     const [kbrToken, setKbr] = useState(),
    
     stake = async()=>{
-        if(data.kbrBalance<1){
+        if(data.kbrBalance<0.1){
             Swal.fire({
                 icon: 'error',
                 title: 'error',

@@ -1,6 +1,6 @@
 import logo from "../../assets/img/logo/logo.svg";
 import { useState ,useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false),
@@ -18,9 +18,9 @@ const Header = () => {
   }
     return (
       <nav className={scroll ? "header-bg" : ""}>
-        <a href="/">
+        <Link to="/">
           <img src={logo} alt="logo" className="logo" />
-        </a>
+        </Link>
 
         <div className={location === '/token' ? 'hide' : "nav-items-wrap"}>
           <button type="button" onClick={mobileMenu} className="button_container">
@@ -47,7 +47,7 @@ const Header = () => {
             <div className="nav-links">
               <ul>
                 <li className="">
-                  <a href="#vision">Vision</a>
+                  <a href="/#vision">Vision</a>
                 </li>
                 <li>
                   <a href="#characteristics">characteristics</a>
@@ -71,11 +71,14 @@ const Header = () => {
                   <a href="/">branding</a>
                 </li> */}
                 <li className="header-btn-wrap">
-                  <a href="#subscribe" className="custom-button">App</a>
+                  {/* <a href="#subscribe" className="custom-button">App</a> */}
+                  <Link to='app' className="custom-button">App</Link>
                 </li>
               </ul>
             </div>
           </div>
+
+
         </div>
       </nav>
     );
