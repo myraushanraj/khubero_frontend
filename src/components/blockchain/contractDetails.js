@@ -4,6 +4,13 @@ export const contractDetails = {
 		tokenImage: 'token icon image path',
 		abi:  [
             {
+                "inputs": [],
+                "name": "allowWithdrawal",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
                 "inputs": [
                     {
                         "internalType": "address",
@@ -60,6 +67,54 @@ export const contractDetails = {
                 "type": "event"
             },
             {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "spender",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "approve",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "spender",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "subtractedValue",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "decreaseAllowance",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
                 "anonymous": false,
                 "inputs": [
                     {
@@ -89,6 +144,25 @@ export const contractDetails = {
                 "inputs": [
                     {
                         "indexed": false,
+                        "internalType": "address",
+                        "name": "account",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "newETH",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "EthSupplyUpdated",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
                         "internalType": "uint256",
                         "name": "fee",
                         "type": "uint256"
@@ -102,6 +176,30 @@ export const contractDetails = {
                 ],
                 "name": "FeeRecieved",
                 "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "spender",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "addedValue",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "increaseAllowance",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "function"
             },
             {
                 "anonymous": false,
@@ -129,6 +227,32 @@ export const contractDetails = {
                 "type": "event"
             },
             {
+                "inputs": [],
+                "name": "mint",
+                "outputs": [],
+                "stateMutability": "payable",
+                "type": "function"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "address",
+                        "name": "staker",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "stakeAmount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "NewStake",
+                "type": "event"
+            },
+            {
                 "anonymous": false,
                 "inputs": [
                     {
@@ -146,6 +270,13 @@ export const contractDetails = {
                 ],
                 "name": "OwnershipTransferred",
                 "type": "event"
+            },
+            {
+                "inputs": [],
+                "name": "pause",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
             },
             {
                 "anonymous": false,
@@ -180,6 +311,50 @@ export const contractDetails = {
                 "type": "event"
             },
             {
+                "inputs": [],
+                "name": "renounceOwnership",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "_amount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "stakeToken",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "to",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "transfer",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
                 "anonymous": false,
                 "inputs": [
                     {
@@ -203,6 +378,13 @@ export const contractDetails = {
                 ],
                 "name": "Transfer",
                 "type": "event"
+            },
+            {
+                "inputs": [],
+                "name": "unpause",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
             },
             {
                 "anonymous": false,
@@ -237,26 +419,92 @@ export const contractDetails = {
                 "type": "event"
             },
             {
-                "inputs": [],
-                "name": "Treasury",
-                "outputs": [
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "address",
+                        "name": "account",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "rewardWithdrawed",
+                "type": "event"
+            },
+            {
+                "inputs": [
                     {
                         "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "to",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "transferFrom",
+                "outputs": [
+                    {
+                        "internalType": "bool",
                         "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "newOwner",
                         "type": "address"
                     }
                 ],
-                "stateMutability": "view",
+                "name": "transferOwnership",
+                "outputs": [],
+                "stateMutability": "nonpayable",
                 "type": "function"
             },
             {
                 "inputs": [],
-                "name": "WAD",
+                "name": "withdrawEth",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "withdrawReward",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "stateMutability": "payable",
+                "type": "receive"
+            },
+            {
+                "inputs": [],
+                "name": "ALLOW_WITHDRAWAL",
                 "outputs": [
                     {
-                        "internalType": "uint256",
+                        "internalType": "bool",
                         "name": "",
-                        "type": "uint256"
+                        "type": "bool"
                     }
                 ],
                 "stateMutability": "view",
@@ -290,30 +538,6 @@ export const contractDetails = {
                 "inputs": [
                     {
                         "internalType": "address",
-                        "name": "spender",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "amount",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "approve",
-                "outputs": [
-                    {
-                        "internalType": "bool",
-                        "name": "",
-                        "type": "bool"
-                    }
-                ],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
                         "name": "account",
                         "type": "address"
                     }
@@ -340,30 +564,6 @@ export const contractDetails = {
                     }
                 ],
                 "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "spender",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "subtractedValue",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "decreaseAllowance",
-                "outputs": [
-                    {
-                        "internalType": "bool",
-                        "name": "",
-                        "type": "bool"
-                    }
-                ],
-                "stateMutability": "nonpayable",
                 "type": "function"
             },
             {
@@ -431,6 +631,77 @@ export const contractDetails = {
                 "type": "function"
             },
             {
+                "inputs": [],
+                "name": "FINAL_REWARD_ETH_TO_WITHDRAW",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "FINAL_STAKED_TOKENS",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "getActiveStakeCount",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "getAllStakeAccount",
+                "outputs": [
+                    {
+                        "internalType": "address[]",
+                        "name": "",
+                        "type": "address[]"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "_stakeID",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "getCurrentStakeAmount",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
                 "inputs": [
                     {
                         "internalType": "uint256",
@@ -455,27 +726,58 @@ export const contractDetails = {
                 "type": "function"
             },
             {
+                "inputs": [],
+                "name": "getStakeCount",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
                 "inputs": [
                     {
                         "internalType": "address",
-                        "name": "spender",
+                        "name": "account",
                         "type": "address"
                     },
                     {
                         "internalType": "uint256",
-                        "name": "addedValue",
+                        "name": "_stakeID",
                         "type": "uint256"
                     }
                 ],
-                "name": "increaseAllowance",
+                "name": "getStakeInfo",
                 "outputs": [
                     {
-                        "internalType": "bool",
+                        "internalType": "uint256",
                         "name": "",
-                        "type": "bool"
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
                     }
                 ],
-                "stateMutability": "nonpayable",
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "getTotalStakeAmount",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
                 "type": "function"
             },
             {
@@ -506,19 +808,31 @@ export const contractDetails = {
             },
             {
                 "inputs": [],
-                "name": "mint",
-                "outputs": [],
-                "stateMutability": "payable",
-                "type": "function"
-            },
-            {
-                "inputs": [],
                 "name": "name",
                 "outputs": [
                     {
                         "internalType": "string",
                         "name": "",
                         "type": "string"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "deposited_amount",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "outputETHReward",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "outputEth",
+                        "type": "uint256"
                     }
                 ],
                 "stateMutability": "view",
@@ -539,13 +853,6 @@ export const contractDetails = {
             },
             {
                 "inputs": [],
-                "name": "pause",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [],
                 "name": "paused",
                 "outputs": [
                     {
@@ -555,26 +862,6 @@ export const contractDetails = {
                     }
                 ],
                 "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [],
-                "name": "renounceOwnership",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "uint256",
-                        "name": "_newCap",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "resetInvestmentCap",
-                "outputs": [],
-                "stateMutability": "nonpayable",
                 "type": "function"
             },
             {
@@ -604,92 +891,34 @@ export const contractDetails = {
                 "type": "function"
             },
             {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "to",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "amount",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "transfer",
+                "inputs": [],
+                "name": "Treasury",
                 "outputs": [
                     {
-                        "internalType": "bool",
+                        "internalType": "address",
                         "name": "",
-                        "type": "bool"
-                    }
-                ],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "from",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "address",
-                        "name": "to",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "amount",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "transferFrom",
-                "outputs": [
-                    {
-                        "internalType": "bool",
-                        "name": "",
-                        "type": "bool"
-                    }
-                ],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "newOwner",
                         "type": "address"
                     }
                 ],
-                "name": "transferOwnership",
-                "outputs": [],
-                "stateMutability": "nonpayable",
+                "stateMutability": "view",
                 "type": "function"
             },
             {
                 "inputs": [],
-                "name": "unpause",
-                "outputs": [],
-                "stateMutability": "nonpayable",
+                "name": "WAD",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
                 "type": "function"
-            },
-            {
-                "inputs": [],
-                "name": "withdrawEth",
-                "outputs": [],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "stateMutability": "payable",
-                "type": "receive"
             }
         ],
 		address: {
-			4: '0xB2E681efB5EC9e990C98987f550a29F8380da560'
+			4: '0x84CE4E02707b6466Fb7F953147bB1178E62f8DE2'
 		}
 	},
     STAKES: {
@@ -1053,7 +1282,8 @@ export const contractDetails = {
 		address: {
 			4: '0xF081628a47C81F10b014b4c74dD33bc4aBd13015'
 		}
-	}
+	},
+
 
 
 }

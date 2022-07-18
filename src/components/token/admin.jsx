@@ -5,7 +5,7 @@ import { contractDetails } from "../blockchain/contractDetails";
 import ContentTitle from "../contentTitle";
 import { Col, Row } from "react-bootstrap";
 
-const Admin = ({writeContractFunction, verifyTransaction})=>{
+const Admin = ({writeContractFunction, verifyTransaction, data, initValue})=>{
     const withdrawEther = async() =>{
         const KBRContract = await writeContractFunction('KBR');
         KBRContract.withdrawEth().then((data) => {
@@ -32,10 +32,10 @@ const Admin = ({writeContractFunction, verifyTransaction})=>{
     }
 
     const allowWithdraw = async() =>{
-        const KBRContract = await writeContractFunction('STAKES');
+        const KBRContract = await writeContractFunction('KBR');
         KBRContract.allowWithdrawal().then((data) => {
            
-            data && data.hash && verifyTransaction(data.hash)
+            data && data.hash && verifyTransaction(data.hash, initValue)
         })
         .catch((error) => {
             console.log("error", error)
@@ -68,11 +68,12 @@ const Admin = ({writeContractFunction, verifyTransaction})=>{
                     <button onClick={withdrawEther}>Withdraw ETH</button>
                 </div>
             </Col>
-            <Col md="6" lg='4' className="d-flex justify-content-center justify-content-md-start mt-0">
+            
+            {!data.userAllowReward && <Col md="6" lg='4' className="d-flex justify-content-center justify-content-md-start mt-0">
                 <div className="buttonWrapper">
                     <button onClick={allowWithdraw}>Allow Withdraw</button>
                 </div>
-            </Col>
+            </Col>}
          </Row>
        </div>
     )

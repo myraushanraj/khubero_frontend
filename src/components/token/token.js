@@ -17,25 +17,24 @@ const TokenPage = () =>{
         const userAddress = await loginMetaMask();
 
         const KBRContract = await readContractFunction('KBR');
-        const stakesContract = await readContractFunction('STAKES');
+        const stakesContract = await readContractFunction('KBR');
         setStakesContract(stakesContract);
         const owner = await KBRContract.owner();
         const totalSupply = ethers.utils.formatEther(await KBRContract.totalSupply());
         const investmentCap = ethers.utils.formatEther(await KBRContract.investmentCap());
-        const exchangeRate = ethers.utils.formatEther(await KBRContract.exchangeRate());
+        const exchangeRate =ethers.utils.formatEther(await KBRContract.exchangeRate());
         const fee = ethers.utils.formatEther(await KBRContract.feePercentage())*100;
         const minInvestment =  ethers.utils.formatEther(await KBRContract.minInvestment());
         const kbrBalance =  ethers.utils.formatEther(await KBRContract.balanceOf(userAddress));
-        console.log("stake addres", contractDetails.STAKES.address[4]);
-        const stakeAddress = contractDetails.STAKES.address[4];
-        const allowance = await KBRContract.allowance(userAddress, stakeAddress);
+        const userAllowReward = await KBRContract.ALLOW_WITHDRAWAL()
+        // const stakeAddress = contractDetails.STAKES.address[4];
         const totalStakedAmount = ethers.utils.formatEther(await stakesContract.getTotalStakeAmount());
         // console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getTotalStakeAmount())
 
         // console.log("await stakesContract.getTotalStakeAmount()", await stakesContract.getStakeInfo(userAddress, 1))
-        setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee,minInvestment, allowance: Number(allowance), kbrBalance, totalStakedAmount});
+        setData({...data, owner, totalSupply, investmentCap, exchangeRate,fee,minInvestment, kbrBalance, totalStakedAmount, userAllowReward});
 
-        console.log("stakesContract",stakesContract);
+        // console.log("stakesContract",stakesContract);
         //0x75E0538B84a84625e6E75AcF1e61d0B816098A95,1000000000000000000,1000000000,100000000000000000,2
     }
      useEffect(()=>{
@@ -149,7 +148,7 @@ const TokenPage = () =>{
               <Col xl={6} md={4}>
                 <div className="box">
                   <h3>Exchange Rate</h3>
-                  <p>{data.exchangeRate}</p>
+                  <p>1 ETH = {data.exchangeRate}KBR</p>
                 </div>
               </Col>
               <Col xl={6} md="4">
