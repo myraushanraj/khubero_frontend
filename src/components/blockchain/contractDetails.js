@@ -918,7 +918,7 @@ export const contractDetails = {
             }
         ],
 		address: {
-			4: '0x84CE4E02707b6466Fb7F953147bB1178E62f8DE2'
+			4: '0x2bBBd655b2A43d52caD9eAFe9a629f6Fa68Eb5fb'
 		}
 	},
     STAKES: {
