@@ -10,7 +10,7 @@ const Characteristics = () => {
     <div className='padding-inline' id='characteristics'>
         <SectionTitle title="why us" />
 
-        <div className="padding-block">
+        <div className="padding-block pt-5">
           <ContentTitle title="Characteristics" />
           <p>We partner with those brands and emerging startups which can offer something unique to the metaverse and by connecting with industry leading architects and designers we develop properties that will stand out among the lot attracting huge users and economic opportunities alike. </p>
 

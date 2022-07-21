@@ -9,10 +9,10 @@ const Footer = () => {
     <footer className='padding-inline footer'>
         <div className="footer-menu">
             <div className="row g-5 align-items-start justify-content-between footer-top">
-                <div className="col-xl-4 col-lg-4 col-12">
+                <div className="col-xl-2 col-lg-2 col-12">
                     <div className="footer-logo">
                         <img src={logo} alt="logo" width="209px" />
-                        <p>We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, Ut enim ad minim veniam, quis nostrud equip consectetur adipiscing ex ea commodo dolor consequat</p>
+                        {/* <p>We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, Ut enim ad minim veniam, quis nostrud equip consectetur adipiscing ex ea commodo dolor consequat</p> */}
                     </div>
                 </div>
 

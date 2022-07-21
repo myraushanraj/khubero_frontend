@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className='about-section padding-inline' id='vision'>
         <SectionTitle title="About Us" />
-        <div className="padding-block ">
+        <div className="padding-block pt-0">
             <Row className='gx-5 align-items-center'>
                 <Col xl={6}>
                     <ContentTitle title="Vision" />

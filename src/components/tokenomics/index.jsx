@@ -13,7 +13,7 @@ const Tokenomics = () => {
             <div className="padding-bottom">
                 <SectionTitle title="TOKENOMICS" />
             </div>
-            <Row className='align-items-center'>
+            <Row className='align-items-start'>
                 <Col xl='6'>
                     <div className="chart-bg">
                         <Chart />
