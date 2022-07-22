@@ -1,4 +1,4 @@
-import { faDribbble, faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faDribbble, faFacebookF, faLinkedinIn, faInstagram, faTelegram, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -48,17 +48,24 @@ const Footer = () => {
             <div className="row g-3 justify-content-between">
                 <div className="col-md-6">
                     <div className="d-flex">
+                    <a href='https://www.facebook.com/' target="_blank" className="social-icon-wrap">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
                         <a href='https://www.facebook.com/' target="_blank" className="social-icon-wrap">
                             <FontAwesomeIcon icon={faFacebookF} />
+                        </a>
+                        <a href='https://www.facebook.com/' target="_blank" className="social-icon-wrap">
+                            <FontAwesomeIcon icon={faTelegram} />
+                        </a>
+                        <a href='https://twitter.com/' target="_blank" className="social-icon-wrap">
+                            <FontAwesomeIcon icon={faDiscord} />
                         </a>
 
                         <a href='https://www.linkedin.com/' target="_blank" className="social-icon-wrap">
                             <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
 
-                        <a href='https://twitter.com/' target="_blank" className="social-icon-wrap">
-                            <FontAwesomeIcon icon={faDribbble} />
-                        </a>
+                        
                     </div>
                 </div>
                 <div className="col-md-auto copyright ">
