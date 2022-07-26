@@ -18,7 +18,7 @@ const Characteristics = () => {
               <div className="btn-decoration-line"></div>
 
               <div className="double-button-wrap">
-                  <Link to="" className='border-btn'>Whitepaper <FontAwesomeIcon icon={faChevronRight} /> </Link>
+                  <a href="/KhuberoWhitepaper.pdf" target="_blank" className='border-btn'>Whitepaper <FontAwesomeIcon icon={faChevronRight} /> </a>
                   <div className="border-gradient-btn"></div>
               </div>
           </div>

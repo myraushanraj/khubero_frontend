@@ -73,7 +73,7 @@ const Header = () => {
                 </li> */}
                 <li className="header-btn-wrap">
                   {/* <a href="#subscribe" className="custom-button">App</a> */}
-                  <Link to='app' className="custom-button">App</Link>
+                  <a href='/app' target="_blank" className="custom-button">App</a>
                 </li>
               </ul>
             </div>

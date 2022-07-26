@@ -63,7 +63,7 @@ const NewsletterWrap = () => {
         <div className="double-button-wrap">
           <div className="newsletter-input">
             <input type="email" className='custom-input' placeholder='email address'  onChange={(e)=>setUserEmail(e.target.value)}/>
-            <button className='newsletter-btn' onClick={sendEmail}>Whitepaper <FontAwesomeIcon icon={faChevronRight} /></button>
+            <button className='newsletter-btn' onClick={sendEmail}>Subscribe <FontAwesomeIcon icon={faChevronRight} /></button>
           </div>
           <div className="border-gradient-btn"></div>
         </div>

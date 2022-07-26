@@ -22,9 +22,9 @@ const Footer = () => {
                     </div>
 
                     <div className="d-grid">
-                        <a href="tel:+911122334455" className="footer-link">+91 1122 334 455</a>
-                        <a href="mailto:contact@khubero.com" className="footer-link">contact@khubero.com</a>
-                        <p className="footer-link">Bay Area, California</p>
+                        <a href="tel:+911122334455" className="footer-link">+971 50 942 4168</a>
+                        <a href="mailto:rachna@khubero.com" className="footer-link">rachna@khubero.com</a>
+                        <p className="footer-link">Office 10, Level 1, <br/>Sharjah Media City, Sharjah, UAE</p>
                     </div>
                 </div>
 
@@ -35,7 +35,6 @@ const Footer = () => {
 
                     <div className="d-grid">
                         <p className="footer-link">About us</p>
-                        <p className="footer-link">Contact us</p>
                         <p className="footer-link">Blog</p>
                         <p className="footer-link">Careers</p>
                         <p className="footer-link">Jobs</p>
@@ -48,16 +47,16 @@ const Footer = () => {
             <div className="row g-3 justify-content-between">
                 <div className="col-md-6">
                     <div className="d-flex">
-                    <a href='https://www.facebook.com/' target="_blank" className="social-icon-wrap">
+                    <a href='https://www.instagram.com/khuberoofficial/' target="_blank" className="social-icon-wrap">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
-                        <a href='https://www.facebook.com/' target="_blank" className="social-icon-wrap">
+                        <a href='https://www.facebook.com/profile.php?id=100083314075541' target="_blank" className="social-icon-wrap">
                             <FontAwesomeIcon icon={faFacebookF} />
                         </a>
-                        <a href='https://www.facebook.com/' target="_blank" className="social-icon-wrap">
+                        <a href='https://t.me/khubero' target="_blank" className="social-icon-wrap">
                             <FontAwesomeIcon icon={faTelegram} />
                         </a>
-                        <a href='https://twitter.com/' target="_blank" className="social-icon-wrap">
+                        <a href='https://discord.com/channels/999286111211888640/999286111211888643' target="_blank" className="social-icon-wrap">
                             <FontAwesomeIcon icon={faDiscord} />
                         </a>
 

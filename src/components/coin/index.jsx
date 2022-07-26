@@ -18,7 +18,7 @@ const Coin = () => {
 
                         <p className="buy-content">You can buy Khubero token from DexSwap in exchange for ether. Click on the following link to buy the Khubero token:</p>
 
-                        <Link to="/app" className="but-link">click here</Link>
+                        <a href="/app" target="_blank" className="but-link">click here</a>
                     </Col>
 
                     <Col md={6} className="d-flex justify-content-center justify-content-md-end">

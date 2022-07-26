@@ -4,7 +4,7 @@ import DataBox from '../dataBox';
 
 const ChartData = () => {
   return (
-    <Row className='g-5'>
+    <Row className='g-5 dataBox'>
         <Col md={6}>
             <DataBox title="Token Supply" value="500M" />
         </Col>
