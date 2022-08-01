@@ -17,7 +17,7 @@ const TokenPage = () =>{
         const userAddress = await loginMetaMask();
 
         const KBRContract = await readContractFunction('KBR');
-        const stakesContract = await readContractFunction('KBR');
+        const stakesContract = await writeContractFunction('KBR');
         setStakesContract(stakesContract);
         const owner = await KBRContract.owner();
         const totalSupply = ethers.utils.formatEther(await KBRContract.totalSupply());

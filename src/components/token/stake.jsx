@@ -96,7 +96,7 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
             
         })
     }
-console.log("data.userAllowReward", data.userAllowReward);
+console.log("data.totalStakeCount", data.totalStakedAmount);
 
     return(
         <>
