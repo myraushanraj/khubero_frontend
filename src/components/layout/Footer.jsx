@@ -34,10 +34,10 @@ const Footer = () => {
                     </div>
 
                     <div className="d-grid">
-                        <p className="footer-link">About us</p>
-                        <p className="footer-link">Blog</p>
-                        <p className="footer-link">Careers</p>
-                        <p className="footer-link">Jobs</p>
+                        <p className="footer-link"><a href="#vision">About us</a></p>
+                        <p className="footer-link"><a href=""></a>Blog</p> 
+                        <p className="footer-link"><a target="_blank" href='https://www.linkedin.com/company/khubero/about/'>Careers</a></p>
+                        <p className="footer-link"><a target="_blank" href='https://www.linkedin.com/company/khubero/about/'>jobs</a></p>
                     </div>
                 </div>
             </div>

@@ -96,7 +96,6 @@ const Stake = ({data, verifyTransaction, writeContractFunction, initValue}) =>{
             
         })
     }
-console.log("data.totalStakeCount", data.totalStakedAmount);
 
     return(
         <>
