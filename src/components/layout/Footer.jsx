@@ -37,7 +37,7 @@ const Footer = () => {
                         <p className="footer-link"><a href="#vision">About us</a></p>
                         <p className="footer-link"><a href=""></a>Blog</p> 
                         <p className="footer-link"><a target="_blank" href='https://www.linkedin.com/company/khubero/about/'>Careers</a></p>
-                        <p className="footer-link"><a target="_blank" href='https://www.linkedin.com/company/khubero/about/'>jobs</a></p>
+                        <p className="footer-link"><a target="_blank" href='https://www.linkedin.com/company/khubero/about/'>Jobs</a></p>
                     </div>
                 </div>
             </div>

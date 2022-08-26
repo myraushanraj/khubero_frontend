@@ -27,19 +27,19 @@
     }
 
     @media (max-width: 1440px) {
-        padding: 135px 80px 135px;
+        padding: 56px 80px 135px;
     }
 
     @media (max-width: 1366px) {
-        padding: 135px 65px 135px;
+        padding: 56px 65px 135px;
     }
 
     @media (max-width: 1200px) {
-        padding: 105px 45px 115px;
+        padding: 56px 45px 115px;
     }
 
     @media (max-width: 560px) {
-        padding: 105px 0 115px;
+        padding: 0px 0 115px;
         background-size: cover;
     }
 }
@@ -48,7 +48,7 @@
     width: 420px;
     height: 420px;
     border-radius: 50%;
-    background: #4A4987;
+    background: transparent;
     position: absolute;
     top: 15%;
     left: 25%;

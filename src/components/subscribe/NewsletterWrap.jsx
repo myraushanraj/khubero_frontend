@@ -47,16 +47,17 @@ const NewsletterWrap = () => {
           <FontAwesomeIcon icon={faSquareCheck} />
           <p>BLOG</p>
         </div>
+        <div className="upper-text">
+          <FontAwesomeIcon icon={faSquareCheck} />
+          <p>NEWSLETTER</p>
+        </div>
 
         <div className="upper-text">
           <FontAwesomeIcon icon={faSquareCheck} />
           <p>EVENTS</p>
         </div>
 
-        <div className="upper-text">
-          <FontAwesomeIcon icon={faSquareCheck} />
-          <p>NEWSLETTER</p>
-        </div>
+        
       </div>
 
       <div className="input-wrap">

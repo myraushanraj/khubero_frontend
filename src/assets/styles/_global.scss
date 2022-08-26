@@ -821,7 +821,7 @@ a.but-link {
     padding-top: 0px;
   }
   .solution-wrap {
-    padding-top: 82px;
+    display: inline;
   }
 }
 .dataBox{
@@ -829,4 +829,8 @@ a.but-link {
     margin-top: 0px;
     margin-bottom: 32px;
   }
+}
+.about-section .padding-block{
+  padding-top: 0px;
+  margin-top: 26px;
 }
