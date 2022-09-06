@@ -1,11 +1,16 @@
 
-import { faChevronRight, faSquareCheck } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faSquare, faSquareCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { useState } from 'react'
 
 const NewsletterWrap = () => {
   const [userEmail, setUserEmail] = useState();
+  const [checbox, setCheckbox] = useState({
+    blog:true,
+    news:true,
+    event:true
+  })
   const sendEmail = () =>{
     var data = {
       service_id: 'service_af39cmq',
@@ -23,37 +28,46 @@ const NewsletterWrap = () => {
     );
   };
 
-  const isValidEmail =validateEmail(userEmail);
+  if(userEmail){
+    const isValidEmail =validateEmail(userEmail);
+    if(!isValidEmail){
+      alert("Invalid Email Address!");
+      return
+    }
 
-   console.log("isValidEmail", isValidEmail, "userEmail", userEmail);
-   return
-  fetch('https://api.emailjs.com/api/v1.0/email/send', {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-  }).then(function() {
-      alert('Your mail is sent!');
-  }).then(function(error) {
-      alert('Oops... ' + JSON.stringify(error));
-  });
+    // console.log("isValidEmail", isValidEmail, "userEmail", userEmail);
+    // return
+   fetch('https://api.emailjs.com/api/v1.0/email/send', {
+     method: 'POST',
+     body: JSON.stringify(data),
+     headers: {
+       'Accept': 'application/json',
+       'Content-Type': 'application/json'
+     },
+   }).then(function() {
+       alert('Thanks for subscribe!');
+   }).then(function(error) {
+   });
+  }
+  else{
+    alert("please enter email address");
+  }
+ 
   }
   return (
     <div className='newsletter-wrap'>
       <div className="input-upper-text d-flex align-items-center justify-content-center">
         <div className="upper-text">
-          <FontAwesomeIcon icon={faSquareCheck} />
+          <FontAwesomeIcon icon={checbox.blog ? faSquareCheck : faSquare} onClick = {()=>{setCheckbox({...checbox, blog:!checbox.blog})}}/>
           <p>BLOG</p>
         </div>
         <div className="upper-text">
-          <FontAwesomeIcon icon={faSquareCheck} />
+          <FontAwesomeIcon  icon={checbox.news ? faSquareCheck : faSquare} onClick = {()=>{setCheckbox({...checbox, news:!checbox.news})}}/>
           <p>NEWSLETTER</p>
         </div>
 
         <div className="upper-text">
-          <FontAwesomeIcon icon={faSquareCheck} />
+          <FontAwesomeIcon  icon={checbox.event ? faSquareCheck : faSquare} onClick = {()=>{setCheckbox({...checbox, event:!checbox.event})}} />
           <p>EVENTS</p>
         </div>
 

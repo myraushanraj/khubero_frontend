@@ -35,7 +35,7 @@ const Footer = () => {
 
                     <div className="d-grid">
                         <p className="footer-link"><a href="#vision">About us</a></p>
-                        <p className="footer-link"><a href=""></a>Blog</p> 
+                        <p className="footer-link"><a target='_blank' href="https://khuberoofficial.medium.com/">Blog</a></p> 
                         <p className="footer-link"><a target="_blank" href='https://www.linkedin.com/company/khubero/about/'>Careers</a></p>
                         <p className="footer-link"><a target="_blank" href='https://www.linkedin.com/company/khubero/about/'>Jobs</a></p>
                     </div>
@@ -60,7 +60,7 @@ const Footer = () => {
                             <FontAwesomeIcon icon={faDiscord} />
                         </a>
 
-                        <a href='https://www.linkedin.com/' target="_blank" className="social-icon-wrap">
+                        <a href='https://www.linkedin.com/company/khubero/about/' target="_blank" className="social-icon-wrap">
                             <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
 
