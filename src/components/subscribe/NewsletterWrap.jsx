@@ -17,7 +17,7 @@ const NewsletterWrap = () => {
       template_id: 'template_rj2z71l',
       user_id: 'EcL2_iY4UjlQDZPsm',
       template_params: {
-          'username': 'raushan10695@gmail.com',
+          'username': userEmail,
           'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
       }
   };
