@@ -10,10 +10,10 @@ const NewsletterWrap = () => {
     blog:true,
     news:true,
     event:true
-  })
-  const sendEmail = () =>{
+  }),
+  sendEmail = () =>{
     var data = {
-      service_id: 'service_af39cmq',
+      service_id: 'service_af39cmq', 
       template_id: 'template_rj2z71l',
       user_id: 'EcL2_iY4UjlQDZPsm',
       template_params: {
@@ -53,7 +53,8 @@ const NewsletterWrap = () => {
     alert("please enter email address");
   }
  
-  }
+  };
+  
   return (
     <div className='newsletter-wrap'>
       <div className="input-upper-text d-flex align-items-center justify-content-center">
