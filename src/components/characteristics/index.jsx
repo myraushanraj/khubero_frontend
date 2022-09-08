@@ -18,7 +18,7 @@ const Characteristics = () => {
               <div className="btn-decoration-line"></div>
 
               <div className="double-button-wrap">
-                  <a href="https://core-images-back.s3.ap-south-1.amazonaws.com/Copy+of+Khubero+Whitepaper.pdf" target="_blank" className='border-btn'>Whitepaper <FontAwesomeIcon icon={faChevronRight} /> </a>
+                  <a href="https://statickhubero.s3.ap-south-1.amazonaws.com/_Khubero+Whitepaper+V1.pdf" target="_blank" className='border-btn'>Whitepaper <FontAwesomeIcon icon={faChevronRight} /> </a>
                   <div className="border-gradient-btn"></div>
               </div>
           </div>
