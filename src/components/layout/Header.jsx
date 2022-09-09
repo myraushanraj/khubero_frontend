@@ -16,7 +16,7 @@ const Header = () => {
   function mobileMenu() {
     setToggle(!toggle);
   }
-  console.log("new deploy")
+  //console.log("new deploy")
     return (
       <nav className={scroll ? "header-bg" : ""}>
         <Link to="/">

@@ -76,14 +76,14 @@ const getAddress = async () => {
 		const signer = await provider.getSigner()
 
 		const address = await signer.getAddress();
-		console.log("address", address);
+		//console.log("address", address);
 		return address;
 }
 
 
 	
 	const loginMetaMask = async() =>{
-		console.log("going to login metamask")
+		//console.log("going to login metamask")
 		await window.ethereum.enable();
 		try{
 	
@@ -94,7 +94,7 @@ const getAddress = async () => {
 			const signer = await provider.getSigner()
 	
 			const address = await signer.getAddress();
-			console.log("address", address);
+			//console.log("address", address);
 			if(address){
 				return address
 			}
