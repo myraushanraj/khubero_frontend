@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import logo from "../../assets/img/logo/logo.svg";
 
 const Footer = () => {
+    console.log("google code")
   return (
     <footer className='padding-inline footer'>
         <div className="footer-menu">
