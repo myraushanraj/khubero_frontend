@@ -186,7 +186,7 @@ nav {
             &.custom-button {
                 justify-content: center;
                 align-items: center;
-                padding: 10px 25px;
+                padding: 10px 51px;
                 gap: 10px;
 
                 width: 129px;
@@ -194,11 +194,16 @@ nav {
 
                 background: #aeacff;
                 border-radius: 12px;
-                color: $white;
+                color: $dark;
                 transition: all .3s ease;
                 flex: none;
                 order: 8;
                 flex-grow: 0;
+                font-weight: 600;
+
+                &:hover {
+                  background: rgba($color: $primary, $alpha: 0.5);
+                }
 
                 @media (max-width: 1280px) {
                   border-radius: 8px;
@@ -254,6 +259,25 @@ nav {
       border-top: 1px solid $secondary;
       border-bottom: 1px solid $secondary;
     }
+  }
+}
+
+.banner-btn {
+  padding: 15px 30px;
+  border-radius: 12px;
+  background: $primary;
+  color: $dark;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 50px;
+  width: fit-content;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba($color: $primary, $alpha: 0.5);
+    color: $white;
   }
 }
 

@@ -96,6 +96,17 @@
         }
     }
 }
+.subscribe-wrap {
+    padding-top: 90px;
+}
+.newsletter-wrap {
+    padding: 135px 0 150px;
+    background-image: url(../img/banners/newsletter-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 70px;
+}
 
 .newsletter-input {
     padding-left: 27px;
@@ -184,5 +195,26 @@
 
     &:hover {
         color: $secondary;
+    }
+}
+
+.bottom-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 39px;
+}
+
+.bottom-subtitle {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+    margin-bottom: 35px;
+}
+
+.text-icon {
+    margin-bottom: 17px;
+
+    svg {
+        height: 55px;
     }
 }

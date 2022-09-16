@@ -7,13 +7,17 @@ import Team from "../team";
 import Tokenomics from "../tokenomics";
 import { Title } from "../util";
 import Loader from '../loader'
+import Insights from "../insights";
+import Metaverse from "../metaverse";
 
 const Home = () => {
   return (
     <div className="home-page">
       <Loader />
       <Banner />
-      <About />
+      <Insights />
+      <Metaverse />
+      {/* <About /> */}
       <Characteristics />
       <Tokenomics />
       <Team />

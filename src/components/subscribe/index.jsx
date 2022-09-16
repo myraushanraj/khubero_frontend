@@ -5,10 +5,10 @@ import NewsletterWrap from './NewsletterWrap'
 
 const Subscribe = () => {
   return (
-    <div className='padding-inline' id='subscribe'>
-        <SectionTitle title='HEY WAIT ! SUBSCRIBE' />
+    <div className='' id='subscribe'>
+        <SectionTitle title='Connect With Us' />
 
-        <div className="padding-block">
+        <div className="">
             <ContentArea />
             <NewsletterWrap />
         </div>

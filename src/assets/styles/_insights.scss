@@ -1,0 +1,58 @@
+.dark {
+    &-card {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 37.1613px;
+            gap: 26.73px;
+            isolation: isolate;
+
+            background: rgba( 255, 255, 255, 0.15 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 9.5px );
+            -webkit-backdrop-filter: blur( 9.5px );
+            box-shadow: 3.71613px 3.71613px 18.5806px rgba(174, 172, 255, 0.2);
+
+            border-radius: 10.6934px;
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 42px;
+            line-height: 59px;
+            letter-spacing: 0.03em;
+
+            color: #FFEEC7;
+        }
+
+        &-desc {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            letter-spacing: 0.03em;
+
+            color: #FFFFFF;
+
+        }
+    }
+}
+
+.insight {
+    &-section {
+        padding-bottom: 120px;
+    }
+
+    &-row {
+        padding-top: 90px;
+        z-index: 2;
+    }
+}
+
+.bg-pattern {
+    position: absolute;
+    top: -170px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}

@@ -1,13 +1,13 @@
 .team {
     &-wrap {
         border-radius: 22px;
-        background-image: url(../img/banners/mountains.png);
+        background-image: url(../img/banners/vector-bg.png);
         overflow: hidden;
         background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 40px;
         position: relative;
         height: 83vh;
@@ -37,6 +37,10 @@
         }
     }
 
+    &-text {
+        margin-bottom: 70px;
+    }
+
     &-about {
         position: relative;
         height: 100%;
@@ -48,11 +52,19 @@
             padding: 15px 0;
         }
 
+        &:nth-of-type(1), &:nth-of-type(5) {
+            top: 35%;
+        }
+
+        &:nth-of-type(2), &:nth-of-type(4) {
+            top: 15%;
+        }
+
         &::after {
             position: absolute;
             content: '';
             width: 3px;
-            height: 358px;
+            height: 100px;
             border-radius: 10px;
             background: linear-gradient(180deg, rgba(241,241,241,1) 0%, rgba(241,241,241,0.5) 50%, rgba(241,241,241,0) 100%);
             top: 32%;
@@ -67,15 +79,7 @@
             }
         }
 
-        &:nth-of-type(2), &:nth-of-type(4) {
-            &::after {
-                height: 235px;
-
-                @media (max-width: 1680px) {
-                    height: 185px;
-                }
-            }
-        }
+        
 
         &:nth-of-type(3) {
             &::after {
