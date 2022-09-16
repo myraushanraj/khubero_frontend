@@ -19,9 +19,9 @@ const Home = () => {
       <Metaverse />
       {/* <About /> */}
       <Characteristics />
-      <Tokenomics />
+      {/* <Tokenomics /> */}
       <Team />
-      <Coin />
+      {/* <Coin /> */}
       <Subscribe />
    </div>
   );
