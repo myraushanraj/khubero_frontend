@@ -1,9 +1,9 @@
 import React from "react";
-import SectionTitle from "../sectionTitle";
+import SectionTitle from "../../sectionTitle";
 import { Row, Col } from "react-bootstrap";
-import ContentTitle from "../contentTitle";
+import ContentTitle from "../../contentTitle";
 import { Link } from "react-router-dom";
-import coin from "../../assets/img/logo/khubero-coin.png";
+import coin from "../../../assets/img/logo/khubero-coin.png";
 
 const Metaverse = () => {
   return (
@@ -13,7 +13,7 @@ const Metaverse = () => {
       <div className="padding-block coin-content-wrap">
         <div className="padding-inline">
           <Row>
-            <Col md="7">
+            <Col lg="7">
               <p className="buy-content text-justify">
                 Khubero is a completely decentralized virtual world where one
                 can leverage virtual real estate via the method tokenization.
@@ -27,8 +27,8 @@ const Metaverse = () => {
             </Col>
 
             <Col
-              md={5}
-              className="d-flex justify-content-center justify-content-md-end"
+              lg={5}
+              className="d-flex justify-content-center justify-content-lg-end"
             >
               <img src={coin} alt="" />
             </Col>

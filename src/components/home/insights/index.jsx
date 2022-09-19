@@ -1,8 +1,8 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-import SectionTitle from '../sectionTitle'
+import SectionTitle from '../../sectionTitle'
 import DarkCard from './DarkCard'
-import bg_pattern from '../../assets/img/banners/wave-bg.png'
+import bg_pattern from '../../../assets/img/banners/wave-bg.png'
 
 const Insights = () => {
   return (

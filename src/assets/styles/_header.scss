@@ -275,6 +275,18 @@ nav {
   transition: all .3s ease;
   cursor: pointer;
 
+  @media (max-width: 1024px) {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+
   &:hover {
     background: rgba($color: $primary, $alpha: 0.5);
     color: $white;

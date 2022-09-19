@@ -2,8 +2,8 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ContentTitle from '../contentTitle'
-import SectionTitle from '../sectionTitle'
+import ContentTitle from '../../contentTitle'
+import SectionTitle from '../../sectionTitle'
 
 const Characteristics = () => {
   return (

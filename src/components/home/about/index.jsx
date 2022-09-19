@@ -1,7 +1,7 @@
 import React from 'react'
-import SectionTitle from '../sectionTitle'
+import SectionTitle from '../../sectionTitle'
 import {Row, Col} from 'react-bootstrap';
-import ContentTitle from '../contentTitle';
+import ContentTitle from '../../contentTitle';
 import solutionBanner from '../../assets/img/banners/solution.png'
 
 const About = () => {

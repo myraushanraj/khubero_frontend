@@ -1,14 +1,10 @@
-import About from "../about";
-import Banner from "../banner";
-import Characteristics from "../characteristics";
-import Coin from "../coin";
+import Banner from "./banner";
+import Characteristics from "./characteristics";
 import Subscribe from "../subscribe";
-import Team from "../team";
-import Tokenomics from "../tokenomics";
-import { Title } from "../util";
+import Team from "./team";
 import Loader from '../loader'
-import Insights from "../insights";
-import Metaverse from "../metaverse";
+import Insights from "./insights";
+import Metaverse from "./metaverse";
 
 const Home = () => {
   return (

@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap'
 const Banner = () => {
   return (
     <div className='banner-wrap padding-inline' id='home'>
-      <Row className='align-items-center'>
+      <Row className='align-items-center gy-4'>
         <Col lg={8}>
           <h2 className="banner-text">experIEnce the</h2>
           <h2 className="bordered-heading">metaverse</h2>
@@ -13,7 +13,7 @@ const Banner = () => {
         </Col>
 
         <Col lg={4}>
-          <div className="d-flex align-items-center justify-content-end">
+          <div className="d-flex align-items-center justify-content-lg-end">
             <div className="banner-btn">Enter Metaverse</div>
           </div>
         </Col>
