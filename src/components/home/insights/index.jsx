@@ -6,7 +6,7 @@ import bg_pattern from '../../../assets/img/banners/wave-bg.png'
 
 const Insights = () => {
   return (
-    <div className='insight-section padding-inline position-relative'>
+    <div className='insight-section padding-inline position-relative' id='insight'>
       <SectionTitle title="Metaverse Insights" />
 
       <img src={bg_pattern} alt="" className='bg-pattern' />

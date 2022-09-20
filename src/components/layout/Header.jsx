@@ -48,7 +48,7 @@ const Header = () => {
             <div className="nav-links">
               <ul>
                 <li className={location === "/app" ? "hide" : ""}>
-                  <a href="/#vision">Vision</a>
+                  <a href="/#insight">Insight</a>
                 </li>
                 <li className={location === "/app" ? "hide" : ""}>
                   <a href="#characteristics">characteristics</a>
