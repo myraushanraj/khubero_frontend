@@ -48,14 +48,12 @@ const Header = () => {
             <div className="nav-links">
               <ul>
                 <li className={location === "/app" ? "hide" : ""}>
-                  <a href="/#insight">Insight</a>
+                  <a href="/#insight">Insights</a>
                 </li>
                 <li className={location === "/app" ? "hide" : ""}>
-                  <a href="#characteristics">characteristics</a>
+                  <a href="#about">About</a>
                 </li>
-                <li className={location === "/app" ? "hide" : ""}>
-                  <a href="#tokenomics">tokenomics</a>
-                </li>
+               
                 <li className={location === "/app" ? "hide" : ""}>
                   <a href="#team">team</a>
                 </li>
@@ -65,15 +63,15 @@ const Header = () => {
                 {/* <li className={location === "/app" ? "hide" : ""}>
                   <a href="/">Roadmap</a>
                 </li> */}
-                <li className={location === "/app" ? "hide" : ""}>
-                  <a href="#get-coin">how to buy</a>
-                </li>
+                {/* <li className={location === "/app" ? "hide" : ""}>
+                  <a href="#join-us">join wait list</a>
+                </li> */}
                 {/* <li>
                   <a href="/">branding</a>
                 </li> */}
                 <li className="header-btn-wrap">
                   {/* <a href="#subscribe" className="custom-button">App</a> */}
-                  <a href='/app' target="_blank" className="custom-button">App</a>
+                  <a href='#join' className="custom-button">join wait list</a>
                 </li>
               </ul>
             </div>

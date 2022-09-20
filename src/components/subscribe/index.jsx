@@ -5,10 +5,10 @@ import NewsletterWrap from './NewsletterWrap'
 
 const Subscribe = () => {
   return (
-    <div className='' id='subscribe'>
+    <div className='' >
         <SectionTitle title='Connect With Us' />
 
-        <div className="">
+        <div >
             <ContentArea />
             <NewsletterWrap />
         </div>

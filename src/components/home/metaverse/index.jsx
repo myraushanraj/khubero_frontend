@@ -7,6 +7,7 @@ import coin from "../../../assets/img/logo/khubero-coin.png";
 
 const Metaverse = () => {
   return (
+    <div id="about">
     <div id="get-coin">
       <SectionTitle title="How Khubero enters the Metaverse?" />
 
@@ -35,6 +36,7 @@ const Metaverse = () => {
           </Row>
         </div>
       </div>
+    </div>
     </div>
   );
 };

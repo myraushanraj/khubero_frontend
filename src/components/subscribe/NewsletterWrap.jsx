@@ -56,7 +56,7 @@ const NewsletterWrap = () => {
   };
   
   return (
-    <div className='newsletter-wrap'>
+    <div className='newsletter-wrap' id='join'>
       <div className="input-upper-text d-flex align-items-center justify-content-center">
         <div className="upper-text">
           <FontAwesomeIcon icon={checbox.blog ? faSquareCheck : faSquare} onClick = {()=>{setCheckbox({...checbox, blog:!checbox.blog})}}/>
@@ -79,7 +79,7 @@ const NewsletterWrap = () => {
         <div className="double-button-wrap">
           <div className="newsletter-input">
             <input type="email" className='custom-input' placeholder='email address'  onChange={(e)=>setUserEmail(e.target.value)}/>
-            <button className='newsletter-btn' onClick={sendEmail}>Subscribe <FontAwesomeIcon icon={faChevronRight} /></button>
+            <button className='newsletter-btn' onClick={sendEmail}>Join Wait List <FontAwesomeIcon icon={faChevronRight} /></button>
           </div>
           <div className="border-gradient-btn"></div>
         </div>
