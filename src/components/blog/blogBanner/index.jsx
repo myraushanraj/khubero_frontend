@@ -1,5 +1,3 @@
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import SectionTitle from '../../sectionTitle'
 import bg_pattern from '../../../assets/img/banners/wave-bg.png'
@@ -28,8 +26,6 @@ const BlogBanner = () => {
 
       <div className='insight-section padding-inline padding-blog'>
         <SectionTitle title="What the BluePrint has to offer" />
-
-
         <p className='pt-5 mt-5'>Expand your metaverse virtual estate knowledge with detailed blogs, click-worthy newsletters, and phygital metaverse events. The industry’s top tech wizards and virtual real estate advocates offer their best advice, how-to’s, and insights. You get all this in the name of helping you to level up your virtual real estate knowledge. </p>
       </div>
     </>

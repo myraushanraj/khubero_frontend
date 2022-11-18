@@ -12,8 +12,9 @@ const Footer = () => {
             <div className="row g-5 align-items-center justify-content-between footer-top">
                 <div className="col-lg-5 col-xl-4 col-12">
                     <div className="footer-logo">
+                        <br/>
                         <img src={logo} alt="logo" width="209px" />
-                        <p className='text-white'>We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, Ut enim ad minim veniam, quis nostrud equip consectetur adipiscing ex ea commodo dolor consequat</p>
+                        <p className='text-white hidden'>We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, Ut enim ad minim veniam, quis nostrud equip consectetur adipiscing ex ea commodo dolor consequat</p>
                     </div>
                 </div>
 
