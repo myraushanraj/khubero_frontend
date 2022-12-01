@@ -65,7 +65,7 @@
 
 .insight {
     &-section {
-        padding-bottom: 120px;
+        // padding-bottom: 120px;
     }
 
     &-row {
@@ -80,4 +80,7 @@
     left: 0;
     width: 100%;
     z-index: 1;
+}
+#team{
+    padding-top: 100px;
 }

@@ -7,7 +7,7 @@ import SectionTitle from '../../sectionTitle'
 
 const Characteristics = () => {
   return (
-    <div className='padding-inline' id='characteristics'>
+    <div className='pb-0 padding-inline ' id='characteristics'>
         <SectionTitle title="Why Khubero?" />
 
         <div className="padding-block pt-5">
