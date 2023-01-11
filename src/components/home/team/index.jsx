@@ -21,9 +21,10 @@ const Team = () => {
                 {/* =========== team about =========== */}
                 <div className="team-about">
                     <h3 className="team-quote"><span className="text-primary">TRUE</span><br /> Ownership</h3>
+                    <h5 className="name">Rachael</h5>
+                    <p className="position">CMO</p>
 
-                    <h5 className="name">Ritesh</h5>
-                    <p className="position">CEO</p>
+                  
                 </div>
                 {/* =========== team about =========== */}
 
@@ -31,8 +32,8 @@ const Team = () => {
                 <div className="team-about">
                     <h3 className="team-quote">Unsurpassevd <br /><span className="text-primary">ALWAYS</span></h3>
 
-                    <h5 className="name">Rachael</h5>
-                    <p className="position">CMO</p>
+                    <h5 className="name">Ritesh</h5>
+                    <p className="position">CEO</p>
                 </div>
                 {/* =========== team about =========== */}
 
@@ -46,12 +47,12 @@ const Team = () => {
                 {/* =========== team about =========== */}
 
                 {/* =========== team about =========== */}
-                {/* <div className="team-about">
+                <div className="team-about">
                     <h3 className="team-quote"><span className="text-primary">CREATE</span><br /> What’s Next</h3>
 
-                    <h5 className="name">Balbinder Singh</h5>
-                    <p className="position">COO, CO-FOUNDER</p>
-                </div> */}
+                    <h5 className="name">Navneet </h5>
+                    <p className="position">CXO</p>
+                </div>
                 {/* =========== team about =========== */}
             </div>
         </div>
