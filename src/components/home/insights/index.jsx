@@ -6,10 +6,10 @@ import bg_pattern from '../../../assets/img/banners/wave-bg.png'
 
 const Insights = () => {
   return (
-    <div className='insight-section padding-inline position-relative' id='insight'>
+    <div className='insight-section padding-inline position-relative'>
       <SectionTitle title="Metaverse Insights" />
 
-      <img src={bg_pattern} alt="" className='bg-pattern' />
+      <img src={bg_pattern} alt="" className='bg-pattern'  id='insight'/>
 
       <Row className='g-5 insight-row'>
         <Col lg={3} md={6}>
